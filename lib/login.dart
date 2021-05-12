@@ -79,10 +79,13 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 TextField(
                   decoration: InputDecoration(
-                    fillColor: const Color(0xFFdce3ed),
+                    filled: true,
+                      fillColor: const Color(0xFFb4c6da),
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(30)
                     ),
+                    
                     labelText: "Email",
                   ),
                 ),
@@ -92,8 +95,11 @@ class _LoginPageState extends State<LoginPage> {
                   TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      fillColor: const Color(0xFFdce3ed),
+                      filled: true,
+                      fillColor: const Color(0xFFb4c6da),
                       border: OutlineInputBorder(
+                        
+                        borderSide: BorderSide.none,
                          borderRadius: BorderRadius.circular(30)
                       ),
                       labelText: "Senha",
