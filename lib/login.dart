@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'fonte',
-        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF0e2a4a),
+        accentColor: const Color(0xFF0e2a4a),
+        canvasColor: const Color(0xFFdce3ed),
+      
       ),
       home: Splash(),
     );
@@ -41,54 +44,91 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFa4bad2),
       body: Center(
+        
+        
+          
           child: Column(
+            
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: CircleAvatar(
-              backgroundImage: AssetImage("assets/uni.jpg"),
-              radius: 70,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: "Email",
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: "Senha",
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+          Container(
+            height: 40,
+           ),
+          Container(
+            width: 170,
+            height: 170,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MyHomePage()));
-                    },
-                    child: Text("Entrar")),
-                ElevatedButton(
-                    onPressed: null, child: Text("Cadastrar Profissional")),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  child: Image(
+                    image: AssetImage("assets/imagens/logo.png")
+                    ),
+                ),
               ],
+            )
+              ),
+              Container(
+                height: 40,
+              ),
+          SizedBox( width: 360,
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    fillColor: const Color(0xFFdce3ed),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    labelText: "Email",
+                  ),
+                ),
+                Container(
+                  height: 10,
+                ),
+                  TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      fillColor: const Color(0xFFdce3ed),
+                      border: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(30)
+                      ),
+                      labelText: "Senha",
+                    ),
+                  ),
+              ], 
             ),
-          )
+          ),
+        Container(
+          height: 25,
+        ),
+
+          ElevatedButton(
+            
+            style: ElevatedButton.styleFrom(
+              textStyle: TextStyle(fontSize: 15),
+              
+              padding: EdgeInsets.symmetric(horizontal: 165, vertical: 25),
+              shape: 
+              
+               RoundedRectangleBorder(
+               borderRadius: BorderRadius.circular(30.0),
+                
+                ),
+              primary: const Color(0xFF0e2a4a),
+            ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MyHomePage()));
+              },
+              
+              child: Text("Entrar",)
+              )
         ],
       )),
     );

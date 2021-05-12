@@ -40,14 +40,34 @@ Widget _introScreen() {
         
         navigateAfterSeconds: LoginPage(),
         loaderColor: Colors.transparent,
+        backgroundColor: const Color(0xFFa4bad2),
       ),
-      Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/imagens/splash.png"),
-            fit: BoxFit.fill,
+      Column(
+        
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 300,
+                height: 300,
+                
+                decoration: BoxDecoration(
+                  
+                  image: DecorationImage(
+                    
+                    image: AssetImage("assets/imagens/splash.png"),
+                    fit: BoxFit.fitHeight,
+                    
+                  ),
+                ),
+              ),
+            ],
           ),
-        ),
+        ],
       ),
     ],
   );

@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'fonte',
-        primarySwatch: Colors.blue,
+        primaryColor: const Color(0xFF0e2a4a),
+        accentColor: const Color(0xFF0e2a4a),
+        canvasColor: const Color(0xFFdce3ed),
+        
       ),
       home: Splash(),
     );
