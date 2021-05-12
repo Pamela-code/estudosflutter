@@ -1,5 +1,6 @@
 import 'package:agendamento/main.dart';
 import 'package:flutter/material.dart';
+import 'package:agendamento/splash.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'fonte',
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(title: 'Salão de Beleza'),
+      home: Splash(),
     );
   }
 }
@@ -40,9 +41,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
           child: Column(
         children: <Widget>[

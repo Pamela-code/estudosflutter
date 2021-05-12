@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
-
+import 'splash.dart';
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'fonte',
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: Splash(),
     );
   }
 }
