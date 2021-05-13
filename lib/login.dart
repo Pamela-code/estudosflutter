@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
-                      fillColor: const Color(0xFFb4c6da),
+                      fillColor: const Color(0xFFc7d4e4),
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(30)
@@ -96,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: true,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: const Color(0xFFb4c6da),
+                      fillColor: const Color(0xFFc7d4e4),
                       border: OutlineInputBorder(
                         
                         borderSide: BorderSide.none,
@@ -134,7 +134,19 @@ class _LoginPageState extends State<LoginPage> {
               },
               
               child: Text("Entrar",)
-              )
+              ),
+              Container(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("Ainda não tem cadastro?  "),
+                  TextButton(onPressed: (){}, child: Text("Cadaste-se aqui", style: TextStyle(fontWeight: FontWeight.bold),),
+                  style: TextButton.styleFrom(primary:const Color(0xFF0e2a4a)),)
+                ],
+
+
+              ),
         ],
       )),
     );
